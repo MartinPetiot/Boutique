@@ -1,6 +1,7 @@
 
 <?php
 include 'Catalogue.php';
+include 'Article.php';
 $affichage = new Catalogue();
 function displayArticle($article){
     echo $article->getName();

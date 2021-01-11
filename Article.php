@@ -1,56 +1,59 @@
 <?php
 
 class Article {
-    private $nom;
+    private $id;
+    private $name;
     private $description;
-    private $prix;
-    private $image;
-    private $poids;
-    private $stock;
-    private $disponible;
+    private $price;
+    private $picture;
+    private $weight;
+    private $quantity;
+    private $available;
 
-    public function __construct($nom,$description,$disponible,$image,$poids,$prix,$stock){
-        $this->nom=$nom;
+    public function __construct($id,$name,$description,$available,$picture,$weight,$price,$quantity){
+        $this->id=$id;
+        $this->name=$name;
         $this->description=$description;
-        $this->prix=$prix;
-        $this->image=$image;
-        $this->poids=$poids;
-        $this->stock=$stock;
-        $this->disponible=$disponible;
+        $this->price=$price;
+        $this->picture=$picture;
+        $this->weight=$weight;
+        $this->quantity=$quantity;
+        $this->available=$available;
     }
+
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function getDescription()
     {
         return $this->description;
     }
 
-    public function getNom()
+    public function getName()
     {
-        return $this->nom;
+        return $this->name;
     }
-    public function getPrix()
+    public function getPrice()
     {
-        return $this->prix;
+        return $this->price;
     }
-    public function getDisponible()
+    public function getAvailable()
     {
-        return $this->disponible;
+        return $this->available;
     }
-    public function getImage()
+    public function getPicture()
     {
-        return $this->image;
+        return $this->picture;
     }
-    public function getPoids()
+    public function getWeight()
     {
-        return $this->poids;
+        return $this->weight;
     }
-    public function getStock()
+    public function getQuantity()
     {
-        return $this->stock;
-    }
-    public function displayArticle(Article $article){
-
-    echo $this->image,$this->prix,$this->description,$this->disponible,$this->nom,$this->poids,$this->stock;
-
+        return $this->quantity;
     }
 }
 

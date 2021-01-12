@@ -10,6 +10,7 @@ class Article {
     private $quantity;
     private $available;
 
+
     public function __construct($id,$name,$description,$available,$picture,$weight,$price,$quantity){
         $this->id=$id;
         $this->name=$name;
@@ -55,5 +56,21 @@ class Article {
     {
         return $this->quantity;
     }
+
+
 }
+class Women extends Article {
+    private $women;
+    public function __construct($id, $name, $description, $available, $picture, $weight, $price, $quantity, $women)
+    {
+
+        parent::__construct($id, $name, $description, $available, $picture, $weight, $price, $quantity);
+        $this->women=$women;
+    }
+    public function getWomen()
+    {
+        return $this->women;
+    }
+}
+
 

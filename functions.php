@@ -6,23 +6,29 @@ include_once 'Clients.php';
 
 $affichage = new Catalogue();
 $affichage2 = new ListeClients();
+//echo $article->getWomen(); echo ("<pre>"); var_dump($article->getWomen()); echo ("</pre>"); die();
 
 
 function displayArticle(Article $article){
-    echo $article->getWomen(); echo ("<pre>"); var_dump($article->getWomen()); echo ("</pre>"); die();
-    echo $article->getId();
-    echo $article->getName();
-    echo $article->getDescription();
-    echo $article->getPrice();
-    echo $article->getAvailable();
-    echo $article->getPicture();
-    echo $article->getWeight();
-    echo $article->getQuantity();
+
+    echo $article->getId() . "<br>";
+    echo $article->getName() . "<br>";
+    echo $article->getDescription() . "<br>";
+    echo $article->getPrice() . "<br>";
+    echo $article->getAvailable() . "<br>";
+    echo $article->getPicture() . "<br>";
+    echo $article->getWeight() . "<br>";
+    echo $article->getQuantity() . "<br>";
+if (get_class($article) == 'Women'){
+    echo $article->getWomen() . "<br>";
+
+}
     }
+
 
 function displayCat(Catalogue $affichage){
     foreach ($affichage->getCatalogue() as $article)
-    displayArticle($article);
+    displayArticle($article). "<br>";
     }
 
 function displayClient(Client $client){
@@ -53,7 +59,8 @@ function displayListeClients(ListeClients $affichage2){
 </head>
 <body>
 <?php
-echo displayCat($affichage);
+echo displayCat($affichage) . "<br>";
+
 ?>
 </body>
 </html>

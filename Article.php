@@ -57,6 +57,11 @@ class Article {
         return $this->quantity;
     }
 
+    public function setName($name): void
+    {
+        $this->name = $name;
+    }
+
 
 }
 class Women extends Article {

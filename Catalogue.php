@@ -11,7 +11,7 @@ class Catalogue
     public function __construct()
     {
 
-        $bdd = new PDO('mysql:host=localhost;dbname=bdd_dump;charset=utf8', 'root', 'root');
+        $bdd = new PDO('mysql:host=localhost;dbname=db_martin;charset=utf8', 'martin@localhost', 'J28m11a91');
         $req = $bdd->query("SELECT * FROM products");
 
         foreach ($req->fetchAll(PDO::FETCH_ASSOC) as $data) {
